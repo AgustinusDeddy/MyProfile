@@ -45,7 +45,7 @@ export default function MyNavbar() {
           </NavDropdown>
         </Nav> */}
         <Nav pullRight>
-          <NavItem eventKey={1} href="/profile">
+          <NavItem eventKey={1} href="/about">
             About
           </NavItem>
           <NavItem eventKey={2} href="/experiences">

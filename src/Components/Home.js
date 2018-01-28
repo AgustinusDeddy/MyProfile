@@ -52,10 +52,8 @@ export default class Home extends Component {
                         <i className='fa fa-phone'> </i>  +60166070273                   
                     </li> */}
                     <li className='text-center'>
-                        <i className='fa fa-lg fa-github fa-2x'> </i>  {profile.github}                   
-                    </li>
-                    <li className='text-center'>
-                        <i className='fa fa-lg fa-linkedin fa-2x'> </i>  {profile.linkedin}                   
+                        <a href={profile.github}><i className='fa fa-lg fa-github fa-2x'></i>  </a>                    
+                        <a href={profile.linkedin}><i className='fa fa-lg fa-linkedin fa-2x'> </i></a>                   
                     </li>
                 </ul>
 
