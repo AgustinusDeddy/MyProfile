@@ -7,11 +7,21 @@ import Educations from './Educations'
 import About from './About'
 
 class App extends Component {
+
+  // state={
+  //   selectedKey : 0
+  // }
+
+  // handleSelect = (selectedKey) => {
+  //   console.log(selectedKey, 'selected')
+  //   this.setState(() => ({ selectedKey }))
+  // }
+
   render() {
     return (
       <Router>
         <div>
-          <MyNavbar />
+          <MyNavbar/>
 
           <Switch>
             <Route path='/' exact component={Home} />

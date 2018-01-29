@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {GetExperiences, getExperiences} from '../api'
+import {getExperiences} from '../api'
 import {Link} from 'react-router-dom'
 
 export default class WorkExperiences extends Component {

@@ -1,4 +1,4 @@
-import Slug from 'slug'
+// import Slug from 'slug'
 
 const profile = {
     name : 'Agustinus Deddy Arief Wibowo',

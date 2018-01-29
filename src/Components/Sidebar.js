@@ -3,16 +3,22 @@ import PropTypes from 'prop-types'
 import { Link, Route } from 'react-router-dom'
 import slug from 'slug'
 
-function CustomLink ({ to, children }) {
+Sidebar.propTypes = {
+    title: PropTypes.string.isRequired,
+    list: PropTypes.array.isRequired,
+    loading: PropTypes.bool.isRequired,
+  }
+
+function CustomLink ({ to, children,asu }) {
     return (
       <Route
         path={to.pathname}
-        children={({ match }) => (
-            <Link to={to}>
-                <li className="list-group-item" style={{listStyleType: 'none', backgroundColor: match ? '#428bca' : '#221f1f'}}>
-                    {children}
-                </li>
-            </Link>
+        children={({ match }) => ( 
+          <Link to={to}>
+            <li className="list-group-item" style={{listStyleType: 'none', backgroundColor: match ? '#428bca' : '#221f1f'}}>
+              {children}
+            </li>    
+          </Link>       
         )}
       />
     )

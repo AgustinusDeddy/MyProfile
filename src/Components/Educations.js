@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Sidebar from './Sidebar'
 import {getEducations} from '../api'
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 export default class Educations extends Component {
 
@@ -11,7 +11,7 @@ export default class Educations extends Component {
     }
 
     componentDidMount () {
-        const { location } = this.props
+        // const { location } = this.props
 
         getEducations()
             .then((educations) => {
@@ -49,8 +49,8 @@ export default class Educations extends Component {
                     if(loading === true)
                         return null
                     
-                    console.log(match);
-                    const {degree, institution, period, results} = educations.find( (edu) => edu.id == match.params.educationId )
+                    // console.log(match);
+                    const {degree, institution, period, results} = educations.find( (edu) => edu.id === parseInt(match.params.educationId, 10) )
 
                     return (
 

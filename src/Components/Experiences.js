@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Sidebar from './Sidebar'
 import {getExperiences} from '../api'
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 export default class Experiences extends Component {
 
@@ -11,7 +11,7 @@ export default class Experiences extends Component {
     }
 
     componentDidMount () {
-        const { location } = this.props
+        // const { location } = this.props
         console.log(this.props, "DidMount");
         getExperiences()
             .then((experiences) => {
@@ -27,7 +27,7 @@ export default class Experiences extends Component {
         const { loading, experiences } = this.state
         const { location, match } = this.props
 
-        console.log(this.props, "Experiences")
+        // console.log(this.props, "Experiences")
 
         return (
             <div className= 'panel firstPanel two-column col-md-8 col-md-offset-2'>
@@ -51,8 +51,8 @@ export default class Experiences extends Component {
                     if(loading === true)
                         return null
                     
-                    console.log(match);
-                    const {position, company, period, description} = experiences.find( (exp) => exp.id == match.params.experienceId )
+                    // console.log(match);
+                    const {position, company, period, description} = experiences.find( (exp) => exp.id === parseInt(match.params.experienceId, 10) )
 
                     return (
 
@@ -63,7 +63,7 @@ export default class Experiences extends Component {
                             <div className="text-left">
                                 <ul style={{listStyleType: 'square'}}>
                                 {description.map((d) => (                     
-                                    <li className="description">
+                                    <li className="description" key={d}>
                                         {d}
                                     </li>
                                 ))}
