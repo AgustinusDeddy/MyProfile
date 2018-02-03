@@ -59,7 +59,7 @@ export default class Educations extends Component {
                     return (
 
                         <TransitionGroup className='panel text-center col-md-9 pull-right'>
-                            <CSSTransition key={location.key} timeout={300} classNames='fade'>
+                            <CSSTransition key={location.key} timeout={500} classNames='fade'>
                                 <div className='panel'>
                                     <h4>{degree}</h4> 
                                     <h5>{institution}</h5>
