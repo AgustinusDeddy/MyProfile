@@ -1,4 +1,1 @@
-*.rb linguist-language=Javascript
-
-src/Components/* linguist-vendored
-index.css linguist-vendored=false
+*.css linguist-language=Javascript
