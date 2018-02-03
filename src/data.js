@@ -8,7 +8,7 @@ const profile = {
     phone: '+60166070273',
     email: 'deddyarief1@gmail.com',
     github: 'https://github.com/AgustinusDeddy',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/deddyarief/',
     domisili: 'Kuala Lumpur, Malaysia',
     marital: 'Single'
 }
