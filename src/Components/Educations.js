@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import Sidebar from './Sidebar'
 import {getEducations} from '../api'
 import { Route } from 'react-router-dom'
+import {
+    TransitionGroup,
+    CSSTransition
+  } from 'react-transition-group'
 
 export default class Educations extends Component {
 
@@ -54,22 +58,26 @@ export default class Educations extends Component {
 
                     return (
 
-                        <div className='panel text-center col-md-9 pull-right'>
-                            <h4>{degree}</h4> 
-                            <h5>{institution}</h5>
-                            <h5>{period}</h5>
-                            <h6>{results}</h6>
-                            {/* <div className="text-left">
-                                <ul style={{listStyleType: 'square'}}>
-                                {description.map((d) => (                     
-                                    <li className="description">
-                                        {d}
-                                    </li>
-                                ))}
-                                </ul>
-                            </div> */}
-                            
-                        </div>              
+                        <TransitionGroup className='panel text-center col-md-9 pull-right'>
+                            <CSSTransition key={location.key} timeout={300} classNames='fade'>
+                                <div className='panel'>
+                                    <h4>{degree}</h4> 
+                                    <h5>{institution}</h5>
+                                    <h5>{period}</h5>
+                                    <h6>{results}</h6>
+                                    {/* <div className="text-left">
+                                        <ul style={{listStyleType: 'square'}}>
+                                        {description.map((d) => (                     
+                                            <li className="description">
+                                                {d}
+                                            </li>
+                                        ))}
+                                        </ul>
+                                    </div> */}
+                                    
+                                </div>    
+                            </CSSTransition>
+                        </TransitionGroup>            
                     )
                 }} />
             </div>        
